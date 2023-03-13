@@ -4,7 +4,7 @@ pipeline {
     CLOUDSDK_CORE_PROJECT='pccw-sandbox'
     CLIENT_EMAIL='kazu-service-account@pccw-sandbox.iam.gserviceaccount.com'
     GCLOUD_CREDS=credentials('gcloud-creds')
-    ACCOUNT_FILE=credentials('pccw-sandbox')
+  # ACCOUNT_FILE=credentials('pccw-sandbox')
     
   }
   stages {
@@ -18,7 +18,7 @@ pipeline {
     stage('Authenticate') {
       steps {
         sh '''
-          gcloud auth activate-service-account --key-file='$GCLOUD_CREDS'
+          gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
         '''
       }
     }
