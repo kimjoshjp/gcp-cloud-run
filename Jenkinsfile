@@ -4,7 +4,7 @@ pipeline {
     CLOUDSDK_CORE_PROJECT='pccw-sandbox'
     CLIENT_EMAIL='kazu-service-account@pccw-sandbox.iam.gserviceaccount.com'
     GCLOUD_CREDS=credentials('gcloud-creds')
-    ACCOUNT_FILE=credentials('gcp-service')
+    ACCOUNT_FILE=credentials('pccw-sandbox')
     
   }
   stages {
