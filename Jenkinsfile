@@ -18,7 +18,7 @@ pipeline {
     stage('Authenticate') {
       steps {
         sh '''
-          gcloud auth activate-service-account --key-file="$ACCOUNT_FILE"
+          gcloud auth activate-service-account --key-file='$GCLOUD_CREDS'
         '''
       }
     }
